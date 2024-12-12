@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 330px 1fr 380px; /* Ajusta los tamaños según necesites */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #1F1B24;
+  justify-items: center;
+  align-items: center;
+}
+
+.Feed{
+  overflow-y: auto; /* Permite el scroll vertical en la sección central */
+  border: 1px solid #ccc; /* Añade un borde a la sección central */
 }
 
 .App-logo {
@@ -28,11 +38,3 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
