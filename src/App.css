@@ -1,40 +1,47 @@
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
 .App {
   display: grid;
-  grid-template-columns: 330px 1fr 380px; /* Ajusta los tamaños según necesites */
+  grid-template-columns: 20% 1fr 26%; /* Ajusta los tamaños según necesites */
   height: 100vh; /* Ocupa toda la altura de la pantalla */
   background-color: #1F1B24;
   justify-items: center;
   align-items: center;
+  gap: 45px;
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
 }
 
-.Feed{
-  overflow-y: auto; /* Permite el scroll vertical en la sección central */
-  border: 1px solid #ccc; /* Añade un borde a la sección central */
+.SideBarL, .SideBarR {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh; /* Asegura que las barras laterales ocupen toda la altura de la pantalla */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Feed {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-y: auto; /* Permite el scroll vertical en la sección central */
+  height: 100vh; /* Asegura que la sección central ocupe toda la altura de la pantalla */
+  box-sizing: border-box; /* Incluye el borde en el ancho total */
+  padding-top: 50px; /* Añade un padding para separar los elementos del borde de la pantalla */
+
 }
 
-.App-link {
-  color: #61dafb;
+.Feed::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en navegadores basados en WebKit */
 }
+
+.Feed {
+  -ms-overflow-style: none;  /* Oculta la barra de desplazamiento en Internet Explorer y Edge */
+  scrollbar-width: none;  /* Oculta la barra de desplazamiento en Firefox */
+}
+
 

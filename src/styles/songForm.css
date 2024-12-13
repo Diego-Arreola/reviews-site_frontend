@@ -1,0 +1,75 @@
+.songForm{
+    display: grid;
+    grid-template-columns: 45% 55%; /* Dos columnas iguales */
+    align-items: start;
+}
+
+.songForm > div:nth-child(1),
+.songForm > div:nth-child(2) {
+    grid-column: span 1; /* Los primeros dos divs ocupan una columna cada uno */
+    display: flex;
+    align-items: center;
+}
+
+.songForm > div:nth-child(3) {
+    margin-top: 20px;
+    grid-column: span 2;
+    display: flex;
+    align-items: start;
+}
+
+.songForm > div:nth-child(3) > label{
+    margin-right: 13px;
+}
+
+.songForm > div:nth-child(2) > label{
+    margin-left: 9px;
+    margin-right: 17px;
+}
+
+label{
+    color: white;
+    margin-right: 27px;
+}
+
+.song-textfield{
+    width: 70%;
+}
+
+.custom-textarea {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    max-height: 60px;
+    width: 80%;
+    padding: 10px; /* Añadir padding para que el texto no toque los bordes */
+    color: rgba(255, 255, 255, 0.70);; /* Cambiar el color del texto */
+    resize: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.custom-textarea:hover, .custom-textarea:focus {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    outline: none;
+    color: rgba(255, 255, 255, 0.70); /* Cambia el color del texto cuando está enfocado */
+}
+
+.custom-outline {
+    border-color: rgba(255, 255, 255, 0) !important;
+  }
+  
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0) !important;
+  }
+  
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0) !important;
+    
+  }
+
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input {
+    color: rgba(255, 255, 255, 0.70); /* Cambia el color del texto cuando está enfocado */
+  }
+
+
